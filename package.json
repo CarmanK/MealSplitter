@@ -1,0 +1,19 @@
+{
+  "name": "mealsplitter",
+  "version": "1.0.0",
+  "description": "Split meals automatically",
+  "main": "mealSplitter.js",
+  "scripts": {
+    "split": "node mealSplitter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarmanK/MealSplitter.git"
+  },
+  "author": "Kevin Carman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarmanK/MealSplitter/issues"
+  },
+  "homepage": "https://github.com/CarmanK/MealSplitter#readme"
+}
