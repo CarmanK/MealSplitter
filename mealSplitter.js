@@ -1,4 +1,4 @@
-const { appetizers, peopleSplittingAppetizers, meals, tax, tip, total } = require('./receipt.js');
+const { appetizers, peopleSplittingAppetizers, meals, tax, tip, subtotal, total } = require('./receipt.js');
 
 const appetizersRawTotal = appetizers.reduce((partialSum, a) => partialSum + a, 0);
 const numberOfPeopleSplittingAppetizers = peopleSplittingAppetizers.length || meals.length;
@@ -27,7 +27,18 @@ const appetizersTax = appetizersPortion * tax;
 const appetizersTip = appetizersPortion * tip;
 const appetizersTotal = appetizersRawTotal + appetizersTax + appetizersTip;
 
-// Check tax total
+// Check total
+const testTotal = subtotal + tax + tip;
+if (testTotal !== total) {
+    throw new Error(`testTotal does not add up: expected ${total} vs. actual ${testTotal}`)
+}
+
+// Check subtotal
+if (rawTotal !== subtotal) {
+    throw new Error(`Subtotal does not add up: expected ${subtotal} vs. actual ${rawTotal}`)
+}
+
+// Check tax
 let taxTotal = appetizersTax;
 for (const person of Object.keys(peopleTotals)) {
     taxTotal += peopleTotals[person].tax
@@ -36,7 +47,7 @@ if (taxTotal !== tax) {
     throw new Error(`Tax does not add up: expected ${tax} vs. actual ${taxTotal}`)
 }
 
-// Check tip total
+// Check tip
 let tipTotal = appetizersTip;
 for (const person of Object.keys(peopleTotals)) {
     tipTotal += peopleTotals[person].tip
@@ -45,7 +56,7 @@ if (tipTotal !== tip) {
     throw new Error(`Tip does not add up: expected ${tip} vs. actual ${tipTotal}`)
 }
 
-// Double check total
+// Check total
 const totalTotal = rawTotal + taxTotal + tipTotal;
 if (totalTotal !== total) {
     throw new Error(`Total does not add up: expected ${total} vs. actual ${totalTotal}`)

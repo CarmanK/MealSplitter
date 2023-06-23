@@ -9,7 +9,8 @@ module.exports = {
         name: '',
         food: []
     }],
+    subtotal: 0,
     tax: 0,
     tip: 0,
-    total: 0
+    total: 0 // subtotal + tax + tip
 }

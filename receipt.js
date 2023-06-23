@@ -1,33 +1,22 @@
 module.exports = {
     appetizers: [
-        14,
-        16
+        10.50, 3.50, 9.95, 2.95
     ],
     peopleSplittingAppetizers: [ // Leaving this empty will split the appetizers between everyone
-        'kevin', 'clay', 'kyle'
+
     ],
     meals: [{
         name: 'kevin',
-        food: [
-            5, 8, 18, 7, 5
-        ]
+        food: [9, 14.95, 8]
     }, {
-        name: 'clay',
-        food: [
-            7, 7, 3.5, 16
-        ]
+        name: 'sammi',
+        food: [6, 14.5, 4.75, 7.75]
     }, {
         name: 'kyle',
-        food: [
-            5, 3.5, 17, 8, 6.5
-        ]
-    }, {
-        name: 'carson',
-        food: [
-            7.5, 17, 5, 8, 7
-        ]
+        food: [9, 14.95, 7]
     }],
-    tax: 6.6,
-    tip: 38.2,
-    total: 235.8
+    subtotal: 122.80,
+    tax: 4.56,
+    tip: 25,
+    total: 152.36 // subtotal + tax + tip
 }
