@@ -64,8 +64,8 @@ if (totalTotal.toFixed(2) !== total.toFixed(2)) {
 }
 
 
-console.log(`Total: ${total}`);
-console.log(`Tip: ${tip}`);
+console.log(`Total: $${total.toFixed(2)}`);
+console.log(`Tip: $${tip.toFixed(2)} which is ${(tip / (rawTotal + taxTotal) * 100).toFixed(2)}% of the total (after tax) or ${(tip / (rawTotal) * 100).toFixed(2)}% of the total (before tax)`);
 if (appetizers.length) {
     console.log(`Appetizers (with tax and tip) $${appetizersTotal.toFixed(2)}\n\tSplit ${numberOfPeopleSplittingAppetizers} ways between ${namesOfPeopleSplittingAppetizers.map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(', ')}`);
 }
