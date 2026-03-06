@@ -5,7 +5,8 @@
   "main": "mealSplitter.js",
   "scripts": {
     "template": "node ./lib/templateBuilder.js",
-    "split": "node ./lib/mealSplitter.js"
+    "split": "node ./lib/mealSplitter.js",
+    "test": "npx jasmine --config=./test/support/jasmine.mjs"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/CarmanK/MealSplitter/issues"
   },
-  "homepage": "https://github.com/CarmanK/MealSplitter#readme"
+  "homepage": "https://github.com/CarmanK/MealSplitter#readme",
+  "devDependencies": {
+    "jasmine": "^6.1.0"
+  }
 }
