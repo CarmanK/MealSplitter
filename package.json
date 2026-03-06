@@ -1,11 +1,11 @@
 {
-  "name": "mealsplitter",
+  "name": "meal-splitter",
   "version": "2.0.0",
   "description": "Split meals automatically",
   "main": "mealSplitter.js",
   "scripts": {
-    "template": "node templateBuilder.js",
-    "split": "node mealSplitter.js"
+    "template": "node ./lib/templateBuilder.js",
+    "split": "node ./lib/mealSplitter.js"
   },
   "repository": {
     "type": "git",
